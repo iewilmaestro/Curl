@@ -29,7 +29,7 @@ function Curl($url, $h = 0, $post = 0,$cookie = 0, $lewat = 0) {
 		$c = curl_getinfo($ch);
 		if(!$c) return "Curl Error : ".curl_error($ch); else{
 			$head = substr($r, 0, curl_getinfo($ch, CURLINFO_HEADER_SIZE));
-			$$body = substr($r, curl_getinfo($ch, CURLINFO_HEADER_SIZE));
+			$body = substr($r, curl_getinfo($ch, CURLINFO_HEADER_SIZE));
 			curl_close($ch);
 			if(!$body){
 				print "Check your Connection!";
