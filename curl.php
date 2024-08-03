@@ -14,7 +14,7 @@ function Curl($url, $h = 0, $post = 0,$cookie = 0, $lewat = 0) {
 			curl_setopt($ch, CURLOPT_COOKIEFILE,"cookie.txt");
 			curl_setopt($ch, CURLOPT_COOKIEJAR,"cookie.txt");
 		}
-		if($p) {
+		if($post) {
 			curl_setopt($ch, CURLOPT_POST, true);
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 		}
